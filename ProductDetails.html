@@ -1,0 +1,266 @@
+<!-- copy and paste the products code-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Jahan Wholesale</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="Logo">
+                <a href="index.html"><img src="images/logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="Account.html">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" width="30px" height="30px">
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+
+
+<!-- Here add single product details-->
+<!-- Create a small container-->
+<!-- naming this one single-product so it only changes this one-->
+<div class="small-container single-product">
+    <div class="row">
+        <!-- container for our image-->
+        <div class="col-2">
+            <!-- this is our image that takes up 100%-->
+            <!-- We are adding the id becasue when we click the small images we want it to be full screen, so we need the id for that (it goes into the js)-->
+            <img src="images/gallery-1.jpg" width="100%" id="ProductImg">
+
+
+            <!-- Here we are creating another div becasue we have to gropu lots of images-->
+            <div class="small-img-row">
+                <!-- In here is the image-->
+                <div class="small-img-col">
+                    <!-- image alongside being 100% width-->
+                    <img src="images/gallery-1.jpg" width="100%" class="small-img">
+                </div>
+                <!-- In here is the image-->
+                <div class="small-img-col">
+                    <!-- image alongside being 100% width-->
+                    <img src="images/gallery-2.jpg" width="100%" class="small-img">
+                </div>           
+                <!-- In here is the image-->
+                <div class="small-img-col">
+                    <!-- image alongside being 100% width-->
+                    <img src="images/gallery-3.jpg" width="100%" class="small-img">
+                </div>
+                <!-- In here is the image-->
+                <div class="small-img-col">
+                    <!-- image alongside being 100% width-->
+                    <img src="images/gallery-4.jpg" width="100%" class="small-img">
+                </div>
+            </div>
+        </div>
+
+        <!-- this is a div that contains our texts-->
+        <div class="col-2">
+            <!-- this is the text at the top -->
+            <p> Home / T-Shirt</p>
+            <!-- this is the main header text in the middle-->
+            <h1>Red Printed T-Shirt by HRX</h1>
+            <!-- this is the text at the bottom-->
+            <h4> $50.00</h4>
+            <!-- this is the size drop down-->
+            <select>
+                <option>Select Size</option>
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+                <option>XXXL</option>
+            </select>
+            <!-- next to it we have the input with value -->
+            <input type="number" value="1">
+            <!-- then we made a button for add to cart-->
+            <a href="ShoppingCart.html" class="btn"> Add To Cart</a>
+            <!-- then underneath that we added the header and para tag-->
+            <!-- the image next to it is a drop symbol-->
+            <h3>Product Details <i class="fa fa-indent"></i></h3>
+            <!-- This adds the same from product details and the explanation-->
+            <br>
+            <p> Give your summer wardrobe woowhas and i think i woudl wear this ebcasue it is pretu ice</p>
+        </div>
+    </div>
+</div>
+
+<!-- This is the title underneath the first image-->
+<!-- This one controls the width and layout-->
+<div class="small-container">
+    <!-- row is for horizontal row and then row2 is for styling-->
+    <div class="row row-2">
+        <!-- This is the header that shows under the image on the left side-->
+        <h2>Related Products</h2>
+        <!-- This is the smaller text same row on the irght side-->
+        <p>View More</p>
+    </div>
+</div>
+
+
+
+<!-- These are the prodcuts-->
+    <div class="small-container">
+        <!-- You can also remove the dropdown stuff-->
+        <!-- Remove the product 1, 2, 3, 4, 5, 6, 7, 8-->
+        <div class="row">
+            <div class="col-4">
+                <img src="images/product-9.jpg">
+                <h4>G-Shock Watch</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>$100.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/product-10.jpg">
+                <h4>Black Shoes</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>$80.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/product-11.jpg">
+                <h4>Gray Shoes</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>$30.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/product-12.jpg">
+                <h4>Black Pants</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>$40.00</p>
+            </div>
+            <!-- Delete the bottom page numbers-->
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3> Download Our App</h3>
+                    <p> Download App for Android and ios mobiel phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p> Our Purpose Is to sustaniably make the pleasure and benefits of sports accesible to the many</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Snapchat</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Jahan Wholesale</p>
+        </div>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+
+
+
+<!-- This is so we can click the mini images-->
+<!-- This is the new javascript for the product gallery to replace the mini with the big image-->
+<script>
+    // The variable is ProductImg and we are going to get that from the ProductImg ID
+    var ProductImg = document.getElementById("ProductImg")
+    // same thing here but we will use class name instead
+    var SmallImg = document.getElementsByClassName("small-img")
+
+    // when first small image is clicked it will change to the same image as the first image shown
+    SmallImg[0].onclick = function()
+    {
+        // so using the src and we are doing index 0 which is the first when we click the first thumnal it shows the same as teh first thumbnail
+        ProductImg.src = SmallImg[0].src
+    }
+    //and its the same for each one when you click the image it changes to it
+    SmallImg[1].onclick = function()
+    {
+        ProductImg.src = SmallImg[1].src
+    }
+    SmallImg[2].onclick = function()
+    {
+        ProductImg.src = SmallImg[2].src
+    }
+    SmallImg[3].onclick = function()
+    {
+        ProductImg.src = SmallImg[3].src
+    }
+
+</script>
+</body>
+</html>
+
+
+

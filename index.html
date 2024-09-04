@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<!-- This is the language of the document-->
+<html lang = "en">
+<!--The head is for title tab you only use this once in this head you put the title and character set-->
+<head>
+    <meta charset="UTF-8">
+    <!-- What this does is make sures it adapts to different screen sizes to match the device width and intial zoom level to 100% so basically always optimize-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This is the title of the store that pops up as the tab name-->
+    <title>Jahan Wholesale</title>
+    <!-- Here we are connecting the css-->
+    <link rel="stylesheet" href = "style.css">
+    <!-- This is for the font of the website-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- This is for the ratings star -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Everything is in this header class-->
+    <div class="header">
+        <!-- Everything for the navbar is inside the container div because this helps with centering consistent and well structure layout-->
+        <div class="container">
+            <!-- navbar class includes stuff like a header so it will have logo and other links like home etc-->
+            <div class ="navbar">
+                <!-- Inside the navbar we have our first thing which is logo and we made it 125px-->
+                <div class="Logo">
+                    <!-- This link leads to the index html-->
+                    <a href="index.html"><img src="images/logo.png" width="125px"></a>
+                </div>
+                <!-- Here we are adding the navgiation links -->
+                <nav>
+                    <!-- Ul is to make an unordered list its a container for a list of elements-->
+                    <!-- We added the id because we need the variable from this for the javascript below-->
+                    <ul id="MenuItems">
+                        <!-- li to single out the list and the -->
+                        <!-- a is basically for buttons adn you can link where you want them to lead to-->
+                        <!-- Each one leads to the pages we made-->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="Account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <!-- This is for the shopping cart img-->
+                <!-- Instead of css we are doing it in here-->
+                <!-- This link leads to the cart-->
+                <a href="ShoppingCart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                <!-- here we are going to add a menu image for the responsive part-->
+                <!-- The reason why menutoggle is there is because when we click it, it actives the function below-->
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+            <!-- This is basically going to be the first page in our website with the class row each page will be styled the same for -->
+            <div class="row">
+                <!-- This is going to the text that appears on the first page-->
+                <div class="col-2">
+                    <!-- This is the header bigger text-->
+                    <h1> Give your workout<br>a new style!</h1>
+                    <!-- This is the smaller text underneath the header-->
+                    <p>Success blah blah blhah whatever bro idk what even is goes</p>
+                    <!-- This is another button underneath the paragraph tag-->
+                    <!-- We gave different class or else it will follow aobve p tag-->
+                    <a href="products.html" class="btn">Explore Now</a>
+                </div>
+                <!-- This is the same thing as the one above except just an image-->
+                <div class="col-2">
+                    <!-- This is an image-->
+                    <img src="images/image1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Featured Categories -->
+    <div class="categories">
+        <!-- Put everything in here so we can edit -->
+        <div class="small-container">
+            <!-- The class row is for grouping the categories below as a container-->
+            <div class="row">
+                <!-- col-3 is for the images container-->
+                <div class="col-3">
+                    <img src="images/category-1.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="images/category-2.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="images/category-3.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Featured Products -->
+    <div class="small-container">
+        <!-- This creates another heading section-->
+        <!-- We added a class so we can center the h2-->
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <!-- This is the picture of the image-->
+                <!-- This image leads to prodcuct details-->
+                <a href="ProductDetails.html"><img src="images/product-1.jpg"></a>
+                <!-- This is the name of the image-->
+                <!-- This leads to product details-->
+                <a href="ProductDetails.html"><h4>Red Printed Tshirt</h4></a>
+                <!-- This is the rating of the products-->
+                <div class="rating">
+                    <!-- These are fullstars-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <!-- This is the empty star-->
+                    <i class="far fa-star"></i>
+                </div>
+                <!-- This is the price of the image-->
+                <p>$50.00</p>
+            </div>
+
+            <!-- This is the second item-->
+            <div class="col-4">
+                <!-- This is the picture of the image-->
+                <img src="images/product-2.jpg">
+                <!-- This is the name of the image-->
+                <h4>Black Shoes</h4>
+                <!-- This is the rating of the products-->
+                <div class="rating">
+                    <!-- These are fullstars-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <!-- This is the price of the image-->
+                <p>$60.00</p>
+            </div>
+
+            <!-- This is teh third item-->
+            <div class="col-4">
+                <!-- This is the picture of the image-->
+                <img src="images/product-3.jpg">
+                <!-- This is the name of the image-->
+                <h4>Gray Sweatpants</h4>
+                <!-- This is the rating of the products-->
+                <div class="rating">
+                    <!-- These are fullstars-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <!-- This is the empty star-->
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <!-- This is the price of the image-->
+                <p>$20.00</p>
+            </div>
+
+            <!-- This is the fourth item-->
+            <div class="col-4">
+                <!-- This is the picture of the image-->
+                <img src="images/product-4.jpg">
+                <!-- This is the name of the image-->
+                <h4>Blue Puma shirt</h4>
+                <!-- This is the rating of the products-->
+                <div class="rating">
+                    <!-- These are fullstars-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <!-- This is the price of the image-->
+                <p>$40.00</p>
+            </div>
+        </div>
+
+
+<!-- LATEST PRODUCTS-->
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <!-- This is the picture of the image-->
+                <img src="images/product-5.jpg">
+                <!-- This is the name of the image-->
+                <h4> Gray Shoes</h4>
+                <!-- This is the rating of the products-->
+                <div class="rating">
+                    <!-- These are fullstars-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <!-- This is the empty star-->
+                    <i class="far fa-star"></i>
+                </div>
+                <!-- This is the price of the image-->
+                <p>$50.00</p>
+            </div>
+
+            <!-- This is the sixth item-->
+            <div class="col-4">
+                <!-- This is the picture of the image-->
+                <img src="images/product-6.jpg">
+                <!-- This is the name of the image-->
+                <h4>Black Shirt</h4>
+                <!-- This is the rating of the products-->
+                <div class="rating">
+                    <!-- These are fullstars-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <!-- This is the price of the image-->
+                <p>$20.00</p>
+            </div>
+
+            <!-- This is teh seventh item-->
+            <div class="col-4">
+                <!-- This is the picture of the image-->
+                <img src="images/product-7.jpg">
+                <!-- This is the name of the image-->
+                <h4>Black White Gray Socks</h4>
+                <!-- This is the rating of the products-->
+                <div class="rating">
+                    <!-- These are fullstars-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <!-- This is the empty star-->
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <!-- This is the price of the image-->
+                <p>$10.00</p>
+            </div>
+
+            <!-- This is the eigth item-->
+            <div class="col-4">
+                <!-- This is the picture of the image-->
+                <img src="images/product-8.jpg">
+                <!-- This is the name of the image-->
+                <h4>Black Rolex Watch</h4>
+                <!-- This is the rating of the products-->
+                <div class="rating">
+                    <!-- These are fullstars-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <!-- This is the price of the image-->
+                <p>$5000.00</p>
+            </div>
+            
+            <!-- This is the ninth item-->
+            <div class="col-4">
+                <!-- This is the picture of the image-->
+                <img src="images/product-9.jpg">
+                <!-- This is the name of the image-->
+                <h4>G-Shock Watch</h4>
+                <!-- This is the rating of the products-->
+                <div class="rating">
+                    <!-- These are fullstars-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <!-- This is the empty star-->
+                    <i class="far fa-star"></i>
+                </div>
+                <!-- This is the price of the image-->
+                <p>$100.00</p>
+            </div>
+
+            <!-- This is the tenth item-->
+            <div class="col-4">
+                <!-- This is the picture of the image-->
+                <img src="images/product-10.jpg">
+                <!-- This is the name of the image-->
+                <h4>Black Shoes</h4>
+                <!-- This is the rating of the products-->
+                <div class="rating">
+                    <!-- These are fullstars-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <!-- This is the price of the image-->
+                <p>$80.00</p>
+            </div>
+
+            <!-- This is teh eleventh item-->
+            <div class="col-4">
+                <!-- This is the picture of the image-->
+                <img src="images/product-11.jpg">
+                <!-- This is the name of the image-->
+                <h4>Gray Shoes</h4>
+                <!-- This is the rating of the products-->
+                <div class="rating">
+                    <!-- These are fullstars-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <!-- This is the empty star-->
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <!-- This is the price of the image-->
+                <p>$30.00</p>
+            </div>
+
+            <!-- This is the twelfth item-->
+            <div class="col-4">
+                <!-- This is the picture of the image-->
+                <img src="images/product-12.jpg">
+                <!-- This is the name of the image-->
+                <h4>Black Pants</h4>
+                <!-- This is the rating of the products-->
+                <div class="rating">
+                    <!-- These are fullstars-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <!-- This is the price of the image-->
+                <p>$40.00</p>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Limited time deal-->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <!-- This is for the image-->
+                <div class="col-2">
+                    <img src="images/exclusive.png" class="offer-img">
+                </div>
+                <!-- This is for all the texts-->
+                <div class="col-2">
+                    <!-- This is for the p text on top-->
+                    <p>Exclusively available on redstore</p>
+                    <!-- This is the header tag for the item-->
+                    <h1> Smart band 4</h1>
+                    <!-- This is the small text that goes underneath-->
+                    <small> 
+                        Yo fr aiysdblaiusdhfalisudasdijfnasldijfansdiluabsdliashdbfalsidhfbasdliufbaslduf
+                        aslidfuabsdlfiuasbdlfiausfaisud
+                    </small>
+                    <!-- This is for the buy now button-->
+                    <a href="ShoppingCart.html" class="btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Associated Brands-->
+<!-- This is the main container for the brand-->
+    <div class="brands">
+        <div class="small-container">
+            <!-- This contains all the brand images-->
+            <div class="row">
+                <!-- This contains an image for the brand-->
+                <div class="col-5">
+                    <!-- This is the image of the brand-->
+                    <img src="images/logo-godrej.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-oppo.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-coca-cola.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-paypal.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-philips.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Footer -->
+<!-- This is the main container for the footer styling reasons-->
+    <div class="footer">
+        <!-- this will be used to center content and apply consisten padding and margins-->
+        <div class="container">
+            <!-- This is gor a row adn groups the below footers within this container to organize into sections-->
+            <div class="row">
+                <!-- This is for the first part of our footer beginning includes titles and paragraph-->
+                <div class="footer-col-1">
+                    <!-- This is the Header-->
+                    <h3> Download Our App</h3>
+                    <!-- This is the paragraph underneath the header-->
+                    <p> Download App for Android and ios mobiel phone.</p>
+                    <!-- This is for the appstore and google playstore-->
+                    <div class="app-logo">
+                        <!-- This is the playstore and google store-->
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <!-- This is for the image and the paragraph underneath the image-->
+                <div class="footer-col-2">
+                    <!-- This is the Image  -->
+                    <img src="images/logo-white.png">
+                    <!-- This is the paragraph underneath the image-->
+                    <p> Our Purpose Is to sustaniably make the pleasure and benefits of sports accesible to the many</p>
+                </div>
+                <!-- This is underneath the paragraph for the useful links-->
+                <div class="footer-col-3">
+                    <!-- This is the header for the first part-->
+                    <h3>Useful Links</h3>
+                    <!-- We use ul to make an unordered list these consist of links or items-->
+                    <ul>
+                        <!-- li which is list items are links-->
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <!-- This is for the next to it -->
+                <div class="footer-col-4">
+                    <!-- This is the heder-->
+                    <h3>Follow us</h3>
+                    <!-- Same thing unordered lists-->
+                    <ul>
+                        <!-- This is the list items-->
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Snapchat</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- This adds a long horizontal line across the screen-->
+            <hr>
+            <!-- This adds a text underneath the horizontal line-->
+            <p class="copyright">Copyright 2024 - Jahan Wholesale</p>
+        </div>
+    </div>
+
+
+<!-- This is the Javascript for the toggle menu-->
+<!-- This script tag is how we include js into our html-->
+    <script>
+        // var declares the variable named MenuItems its the same was const
+        // Menuitems is the refrence element that we are getting
+        // document means we are refering to the html document
+        // getelementbyid means if it finds menuitems in the html document it returns menuitems or else null
+        var MenuItems = document.getElementById("MenuItems");
+
+        // we are accessing the variable menuitems
+        // style lets us maniputle menuitems and gives us access to the css properties
+        // maxheight lets us control how tall na element can grow or shrink
+        // when it is set to 0 it makes it collapse to zero making it not visible
+        MenuItems.style.maxHeight = "0px";
+
+        // this is the function for menutoggle
+        function menutoggle(){
+            // if menuitems is equal to 0px then
+            if (MenuItems.style.maxHeight == "0px")
+                {   // expand the menu making it 200px
+                    MenuItems.style.maxHeight = "200px";
+                }
+            // or else
+            else
+                {   // collapse the menu by setting the maxheight back to 0
+                    MenuItems.style.maxHeight = "0px";
+                }
+        }
+        // BASICALLY if the maxheight is 0px meaning the menu is gone the conidiont is true then that means the maxheihgt will be set to 200px then if the menu is not hidden and makes the menu hidden again
+    </script>
+
+
+</body>
+</html>
+

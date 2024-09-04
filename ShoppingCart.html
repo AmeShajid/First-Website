@@ -1,0 +1,202 @@
+<!-- copy and paste the productdetailscode-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Jahan Wholesale</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="Logo">
+                <a href="index.html"><img src="images/logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="Account.html">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" width="30px" height="30px">
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+
+<!-- Cart item details-->
+<!-- We are adding another class so we can edit this specifially-->
+<div class="small-container cart-page">
+    <!-- we are making a table here for the checkout-->
+    <table>
+        <!-- table row so here we make the row for the table-->
+        <tr>
+            <!-- here we have the table headers so its 3 across-->
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <!-- then table row again-->
+        <tr>
+            <!-- then we will have the table data in here-->
+            <!-- makes this td and add 2 divs-->
+            <td>
+                <!-- we are going to add in image in here-->
+                <div class="cart-info">
+                    <a href="ProductDetails.html"><img src="images/buy-1.jpg"></a>
+                    <div>
+                        <!-- this div is for name and price-->
+                        <a href="ProductDetails.html"><p>Red Printed Tshirt</p></a>
+                        <small>Price: $50.00</small>
+                        <!-- this is so we can put the remove on the line below-->
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50.00</td>
+        </tr>
+
+        <!-- Here we are adding another product-->
+        <tr>
+            <!-- then we will have the table data in here-->
+            <!-- makes this td and add 2 divs-->
+            <td>
+                <!-- we are going to add in image in here-->
+                <div class="cart-info">
+                    <img src="images/buy-2.jpg">
+                    <div>
+                        <!-- this div is for name and price-->
+                        <p>Red Printed Tshirt</p>
+                        <small>Price: $20.00</small>
+                        <!-- this is so we can put the remove on the line below-->
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$20.00</td>
+        </tr>
+
+        <!-- Here we are adding another product-->
+        <tr>
+            <!-- then we will have the table data in here-->
+            <!-- makes this td and add 2 divs-->
+            <td>
+                <!-- we are going to add in image in here-->
+                <div class="cart-info">
+                    <img src="images/buy-3.jpg">
+                    <div>
+                        <!-- this div is for name and price-->
+                        <p>Red Printed Tshirt</p>
+                        <small>Price: $10.00</small>
+                        <!-- this is so we can put the remove on the line below-->
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$10.00</td>
+        </tr>
+    </table>
+
+    <!-- Here we are doign the total price-->
+    <div class="total-price">
+        <!-- Here we are going to make another table-->
+        <table>
+            <!-- And we are going to have 3 rows inside the rows we have-->
+            <tr>
+                <!-- The tabled ata which is title and price and it will be in row style-->
+                <td>Subtotal</td>
+                <td>$80.00</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>$35.00</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$115.00</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+
+
+
+
+<!-- Delete single product details-->
+<!-- Delete the header underneath that-->
+<!-- Delete the products-->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3> Download Our App</h3>
+                    <p> Download App for Android and ios mobiel phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p> Our Purpose Is to sustaniably make the pleasure and benefits of sports accesible to the many</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Snapchat</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Jahan Wholesale</p>
+        </div>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+<!-- Delete the js for the gallery-->
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,981 @@
+
+/* You only put a period(.) in front of the divs not tags*/
+
+
+
+
+
+/* This is the first page*/
+/* this * is the universal selector which selects all elemnts in the html doucment*/
+*{
+    /* Margin = 0 means all elemnts has 0 margin is psace outside an element border this ensures no elemnt has default margins*/
+    margin: 0;
+    /* Padding = 0 is the space inside an elemnt between its content and broder this ensures that no elemnt has any default padding*/
+    padding: 0;
+    /* This means */
+    box-sizing: border-box;
+}
+/* This is for the font of the website*/
+body{
+    font-family: "Poppins", sans-serif;
+}
+/* This is the navbar class*/
+.navbar{
+    /* makes it a container This brings it to the right side of the image*/
+    display: flex;
+    /* this centerted it vertally in the container*/
+    align-items: center;
+    /* This brings it 20px inside the navbar container createing space between the broder*/
+    padding: 20px;
+}
+
+/* Here we are going to the nav tag inside the navbar class to edit the tags*/
+nav{
+    /* this makes the flex container grow all the way to the right side*/
+    flex: 1;
+    /* And because it grew now we can put it on the rigth side*/
+    text-align: right;
+}
+
+/* Now we are taking the ul tag inside the nav tag*/
+nav ul{
+    /* This makes the bullet points come towards the letters*/
+    display: inline-block;
+    /* This removes the bullet points*/
+    list-style-type: none;
+}
+
+/* Now we are getting the li tag inside the nav ul tag*/
+nav ul li{
+    /* This makes it horizontal*/
+    display: inline-block;
+    /* This adds 20px inbetween*/
+    margin-right: 20px;
+}
+
+/* These both apply to all anchor tags and all p tags*/
+a{
+    /* This removes the underline for the acnhor tags*/
+    text-decoration: none;
+    /* This makes it this color*/
+    color: #000000
+}
+p{
+    /* All the paragraph colors will be this*/ 
+    color: #555
+}
+
+/* This is container div everything is in */
+.container{
+    /* this is the entire max width this website will be worked on*/
+    max-width:1300px;
+    /* centers the container horizontally(equal left and right) this works good with max width so its always centered*/
+    margin: auto;
+    /* Here we add space 25px to the left and right so the context insside the div doesnt touch edges*/
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* This is the row class basically code for each page*/
+.row{
+    /* Put everything in a container so we can manupilate*/
+    display:flex;
+    /* This put the text in the center*/
+    align-items: center;
+    /* This put it back to the top under the logo*/
+    flex-wrap: wrap;
+    /* This moved it to the middle between home and logo*/
+    justify-content: space-around;
+}
+
+/* This is the col-2 class inside the row class*/
+.col-2{
+    /* elements take 50 percent of the width made it a bit smaller*/
+    flex-basis: 50%;
+    /* this makes sure it doesn't shrink below 300px so its a minimum widht*/
+    min-width: 300px
+}
+
+/* This is the col-2 class image in the row class*/
+.col-2 img{
+    /* the image does to 100% in the 300px container*/
+    max-width: 100%;
+    /* Adds 50px up and down in the container and 0 left and right*/
+    padding: 50px 0;
+}
+
+/* This is the header tag inside the col-2 class*/
+.col-2 h1{
+    /* This makes the h1 tag 50px big*/
+    font-size: 50px;
+    /* Adds vertical space between lines */
+    line-height: 60px;
+    /* This made the h1 tag 25px from the top and bottom of everything*/
+    margin: 25px 0;
+}
+
+/* This is for the button class sepearate from a tag */
+.btn{
+    display: inline-block;
+    /* This added background color to this class*/
+    background: #ff523b;
+    /* this made the background grow 8px from top and bottom to the text but 40px from the text left adn right*/
+    padding:8px 30px;
+    /* This moved everything an extra 30mins spread apart eveurting*/
+    margin: 30px 0;
+    /* This made the border around make it un*/
+    border-radius: 30px;
+    /* The transition makes it a .5sec change*/
+    /* it takes the background color from btn:hover and tansition*/
+    transition: background 0.5s;
+}
+
+/* We are adding a hover effect for the button*/
+.btn:hover{
+    /* This is the color it will transition to*/
+    background: #563434;
+}
+
+/* This is mainly for the background of the first page*/
+.header{
+    /* This makes the background into a gradient*/
+    background: radial-gradient(#fff, #ffd6d6)
+}
+
+
+
+
+
+
+
+
+
+
+/* This is the second page above the featured products*/
+/* Now we are going to add space from the bottom*/
+/* We are accessing both classes here*/
+.header .row{
+    /* This gave us another 70px from the top*/
+    margin-top: 70px;
+}
+
+/* This is for the categories*/
+.categories{
+    /*This gives it 70px from the main page and bottom of the page*/
+    /* 0px left and right from the other elements*/
+    margin: 70px 0px;
+}
+
+/* This is to fix the images container*/
+.col-3{
+    /* Everything will occupy 30%space*/
+    flex-basis: 30%;
+    /*Making each image 250px*/
+    min-width: 250px;
+    /* Puts everything on the same line*/
+    /* This also adds 30px space underneath the col-3 so its consistent space*/
+    margin-bottom: 30px;
+}
+
+/* This is to edit the image*/
+.col-3 img{
+    /* This makes it so the image fits the full width of the col-3 container*/
+    width: 100%;
+}
+
+
+
+
+
+
+
+/* This is for the featured Products*/
+/* This is to fix the images*/
+.small-container{
+    /* This makes the entire container a max of 1080px*/
+    max-width: 1080px;
+    /* This centers the images*/
+    margin: auto;
+    /* This adds 25px space inbetween left and right*/
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* This is to fix the product images container*/
+.col-4{
+    /* We are doing 25 because we have 4 images in each row*/
+    flex-basis: 25%;
+    /* 10px in between each*/
+    padding: 10px;
+    /* Each one will be 200px minimum*/
+    min-width: 200px;
+    /* Adds 50px underneath*/
+    margin-bottom: 50px;
+    /* Adding the hover effect from col-4:hover*/
+    transition: transform 0.5s;
+}
+
+/* This is to fix the image*/
+.col-4 img{
+    /* Now it fits into the container*/
+    width: 100%;
+}
+
+
+
+
+
+
+
+/* This is for the latest products*/
+/* This is from the h2 featured products tag to center the featured products*/
+.title{
+    /* Centers horizontally within its element*/
+    text-align: center;
+    /* 0 means no extra space above auto means adjust the left right to center the element 80px means add 80px below the titlet*/
+    margin: 0 auto 80px;
+    /* allowes use of top right left bottom properties if needed*/
+    position: relative;
+    /* adjust the hiegh of each line of text*/
+    line-height: 60px;
+    /* Color of the text*/
+    color:#555
+}
+
+/* Adding a line underneath*/
+.title:after{
+    /* Its empty*/
+    content:"";
+    /* The color is red*/
+    background: #ff523b;
+    /* 100pixels wide*/
+    width: 100px;
+    /* 5 pixels high*/
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    /* Places underneath*/
+    bottom:0;
+    /* takes it to the left*/
+    left: 50%;
+    /* adjust the positioning 50% to the left of its own width (centers it to the title element)*/
+    transform: translate(-50%);
+}
+
+/* This is editing the name of the products*/
+h4{
+    color: #555
+}
+
+/* Editing the col-4 p tag font*/
+.col-4 p{
+    font-size: 14px;
+}
+
+/* changing the color of the star icon*/
+/* going into the class rating then class fa*/
+.rating .fa {
+    color:#ff523b
+}
+
+/* same thing but for the class far*/
+.rating .far{
+    color: #ff523b;
+}
+
+/* Adding hover effect over everything inside the col-4(product itself)*/
+/* Moves 5px in the yaxis*/
+.col-4:hover{
+    transform: translateY(-20px);
+}
+
+
+
+
+
+
+
+
+
+/* This is for the offers page*/
+.offer{
+    /* This makes the background a gradeitn*/
+    background: radial-gradient(#fff, #ffd6d6);
+    /* This adds space above the element adds 80px above */
+    margin-top: 80px;
+    /* Adds 30px of spave at the top and bottom and 0 left adn right*/
+    padding: 30px 0;
+}
+
+/* We are editing the image now in the offer*/
+
+.col-2 .offer-img{
+    /* Adds 50px from all directions makes it smaller*/
+    padding: 50px
+}
+
+/* editing the small text*/
+small{
+    color: #555
+}
+
+
+
+
+
+
+
+
+/* This is for the brands page*/
+/* We are editing the class brands*/
+.brands{
+    /* adds 100px on the top and bottom*/
+    /* auto adjust left and right to center it*/
+    margin: 100px auto;
+}
+
+/* The element is col-5 is going to be exactly 160px*/
+.col-5{
+    width: 160px;
+}
+
+/* Editing the image*/
+.col-5 img{
+    /* Sets the width to 100% of the parent container*/
+    width: 100%;
+    /* changes the mouse cursor to a pointer when hovering over the image*/
+    cursor: pointer;
+    /* applies a grayscale filter to the image*/
+    filter: grayscale(100%)
+}
+
+/* When you hover over the image */
+.col-5 img:hover{
+    /* Removes the grayscale filter from the image*/
+    filter: grayscale(0);
+}
+
+
+
+
+
+
+
+
+/* This is for the footer sectoin */
+/* This is to customize the backgronud and the font*/
+.footer{
+    /* Makes it black*/
+    background: #000;
+    /* Makes the text gray*/
+    color: #8a8a8a;
+    /* Makes the font 14px*/
+    font-size: 14px;
+    /* Makes the top padding 60px right and left zero padding and the bottom padding 20*/
+    padding: 60px 0 20px;
+}
+
+/* Now editing the paragraph tag in the footer*/
+.footer p{
+    color: #8a8a8a;
+}
+
+/* Now editing the h3 tag*/
+.footer h3{
+    color: #fff;
+    /* adds 20px from the botom element*/
+    margin-bottom: 20px;
+}
+
+/* Now editing all the columns togeher*/
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    /* The minimum width this will be 250px*/
+    min-width: 250px;
+    /* Adds 20px from the bottom of the screen*/
+    margin-bottom: 20px;
+}
+
+/* Now editing the first column*/
+.footer-col-1{
+    /* it will occupy 30% of the avaialbe space of the footer*/
+    flex-basis: 30%;
+}
+
+/* Now editing the second column*/
+.footer-col-2{
+    /* It will grow and take up any remaining space in the footer after other columns have taken their space*/
+    /* Basically it occupies all the availabe psace after the frist clumn takes 30%*/
+    flex: 1;
+    /* Centers the text in the second column horizontally*/
+    text-align: center;
+}
+
+/* Editing the column 2 image */
+.footer-col-2 img{
+    /* Making it 180px bug*/
+    width: 180px;
+    /* Giving 20px space from the bottom*/
+    margin-bottom: 20px;
+}
+
+/* now for 3 and 4 column*/
+
+.footer-col-3, .footer-col-4{
+    /* This takes up 12% of the container*/
+    flex-basis: 12%;
+    /* Centers within the column*/
+    text-align: center;
+
+}
+
+/*Now getting rid of the bullet points */
+ul{
+    /*Get rids of the bullet points*/
+    list-style-type: none;
+}
+
+/* editing the div*/
+.app-logo{
+    /* 20px from the element above*/
+    margin-top: 20px;
+}
+
+/* editing the app logo iamge*/
+.app-logo img{
+    /* making the iamge only 140px*/
+    width: 140px;
+}
+
+/* Editing the horizontal line*/
+.footer hr{
+    /* This gets rid of teh horiztonal line (we are editing it)*/
+    border: none;
+    /* This makes it gray*/
+    background: #b5b5b5;
+    /* This makes it 1px high*/
+    height: 1px;
+    /* 20px from top and bottom and 0 left and right*/
+    margin: 20px 0;
+}
+
+/* editing the copyright message*/
+.copyright{
+    /* Puts it in the center*/
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* This is for the menu icon*/
+/* editing the menu icon*/
+.menu-icon{
+    /* makes it 28px */
+    width: 28px;
+    /* adds 20px space from the cart icon*/
+    margin-left: 20px;
+    /* We will hide the menu it will only be shown when its responsive*/
+    display: none;
+}
+
+/* this is the media query for the menu words at the top*/
+/* this onyl applies when the screen is less than 800px*/
+@media only screen and (max-width: 800px){
+
+    /* We are grabbing the nav ul because this is what the menu names are in*/
+    nav ul{
+        /* this makes it so it can positioned anywhere usefull for dropdowns*/
+        position: absolute;
+        /* This brings it 80px down from the element above*/
+        top: 80px;
+        /* This takes it to the left side*/
+        left: 0;
+        /* We give it a backgrounc color of black*/
+        background: #333;
+        /* We make it 100% so it takes up all the space in the footer basically*/
+        width: 100%;
+        /* This hides the words when the screen is minimized */
+        overflow: hidden;
+        /* When you click the menu button it will open up and take .7s*/
+        transition: max-height 0.7s;
+
+    }
+
+    /* so now we are editing the actual positinos of the words in the meny*/
+    nav ul li{
+        /* This made it go underneath each other on the right side*/
+        display: block;
+        /* This gave it 50px space from the rigth side*/
+        margin-right: 50px;
+        /* this gives it 10px space from each other */
+        margin-top: 10px;
+        /* This gave it 10px space from underneath*/
+        margin-bottom: 10px;
+    }
+
+    /* now we are editing the word itself*/
+    nav ul li a{
+        color: #fff;
+    }
+
+    .menu-icon{
+        /* This will only show and will be plaed on top of the others*/
+        display: block;
+        /* When going over it its a pointer*/
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+/* This is  media query for less than 600 pixels(iphone level)*/
+@media only screen and (max-width: 600px){
+
+    /* Editing all the row divs*/
+    .row{
+        /* for all the rows classes it will center all the text for smaller screens*/
+
+        text-align: center;
+    }
+
+    /* editing the colums*/
+    .col-2, .col-3, .col-4{
+        /* Makes each column take up the entire width of its container and stacks columns verticalled on top of each other*/
+        flex-basis: 100%;
+    }
+
+
+    /* This is for the pdocut details*/
+    /* This is to fix the single product*/
+    .single-product .row{
+        /* When smaller the texts hug the right side*/
+        text-align: left;
+    }
+
+    /* This is for spacing*/
+    .single-product .col-2{
+        /* 20px space from up and down and 0 left and right */
+        padding: 20px 0;
+    }
+
+    /* Product title*/
+    .single-product h1{
+        /* Makes it 26px font size*/
+        font-size: 26px;
+        /* The line height is set to 32px*/
+        line-height: 32px;
+    }
+
+    /* this is for the shopping cart and to hide the product name*/
+    .cart-info p{
+        /* hides title for small screen*/
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+/* This is for the products page*/
+/* This is for the all products page*/
+.row-2{
+    /* This places the all products and the drop down on the ends of the container*/
+    justify-content: space-between;
+    /* this puts 100px from top and bottomg this centers the element horizontally and it puts 5px space from the bottom */
+    margin: 100px auto 5px;
+}
+
+
+/* editing the drop down*/
+select{
+    /* the border is 1px solid red line*/
+    border: 1px solid #ff523b;
+    /* 5px space inside the border*/
+    padding: 5px;
+}
+
+/* When clicking other optiosn it turns blacks so we have to fix that*/
+select:focus{
+    /* Now the border will remain*/
+    outline: none;
+}
+
+/* This is for the page buttons at the bottom*/
+.page-btn{
+    /* 0 px to the top auto puts it in the center and 80px fromthe bottom*/
+    margin: 0 auto 80px;
+}
+
+/* This is for editing the numbers containers for the page buttons*/
+.page-btn span{
+    display: inline-block;
+    /* This adds a border around each box 1 px solid red*/
+    border: 1px solid #ff523b;
+    /* Theres 10px of space between each one*/
+    margin-left: 10px;
+    /* makes it 40px wide*/
+    width: 40px;
+    /* makes it 40px high*/
+    height: 40px;
+    /* centers in the box*/
+    text-align: center;
+    /* makes the box 40px*/
+    line-height: 40px;
+    /* makes the cursor a pointer when on it*/
+    cursor: pointer;
+}
+
+/* adding a hover effect*/
+.page-btn span:hover{
+    /* makes the background red*/
+    background: #ff523b;
+    color: #fff;
+}
+
+
+
+
+
+/* Single Product Detauls*/
+.single-product{
+    /* Gives 80px space from the top*/
+    margin-top: 80px;
+}
+
+/* editing the image*/
+.single-product img{
+    /* this gets rid of all the padding arround*/
+    padding: 0;
+}
+
+/* editing the col2*/
+.single-product .col-2{
+    /* this puts padding on all sides*/
+    padding: 20px;
+}
+
+/* editing the h4*/
+.single-product h4{
+    /* adds 20px to the top and bottom and 0 on the sides*/
+    margin: 20px 0;
+    /* 22px font size*/
+    font-size: 22px;
+    /* makes the font bold*/
+    font-weight: bold;
+}
+
+/* editing the drop down box*/
+.single-product select{
+    /* This basically stacks them vertically*/
+    display: block;
+    /* gives 10pixel room inbetween*/
+    padding: 10px;
+    /* now theres space in the drop down*/
+    margin-top: 20px;
+}
+
+/* editing the input box*/
+.single-product input{
+    /* makes box 50px*/
+    width: 50px;
+    /* makes the box height 40px*/
+    height: 40px;
+    /* 10px from the left side*/
+    padding-left: 10px;
+    /* the inside of the box is 20px*/
+    font-size: 20px;
+    /* 10px on the side*/
+    margin-right: 10px;
+    /* border is 1px solid color and red*/
+    border: 1px solid #ff523b;
+}
+
+/* making sure the box stays red*/
+input:focus{
+    /* keeps it the same color*/
+    outline:none
+}
+
+/* this is to edit the i tag next to products*/
+.single-product .fa{
+    /* Makes it red*/
+    color: #ff523b;
+    /* adds 10px from hte left side*/
+    margin-left: 10px;
+}
+
+
+/* This is for editing the gallery of pictures*/
+.small-img-row{
+    /* this put everythign underneath the big image*/
+    display: flex;
+    /* first image aligned to the left second image aligned to the right and anythign inbetween is equal*/
+    justify-content: space-between;
+}
+
+/* This is for those images*/
+.small-img-col{
+    /* Since there are 4 colmns only take up 25% adds space*/
+    flex-basis: 25%;
+    /* Makes the cursor pointer over it*/
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* This is for shopping cart items*/
+.cart-page{
+    /* adds 80px on all sides auto moved centered and ended up on the left*/
+    margin: 80px auto ;
+}
+
+/* editing the table*/
+table{
+    /* takes up entire width*/
+    width: 100%;
+    /* makes it look more streamlined and merge them into single border*/
+    border-collapse: collapse;
+}
+
+/* editing the words*/
+.cart-info{
+    /* puts it on the top right of the image*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* this is editing the the table heading*/
+th{
+    /* aligns text to teh left*/
+    text-align: left;
+    /* adds a 5px space all stides*/
+    padding: 5px;
+    /* makes the text white*/
+    color: #fff;
+    /* makes the backgrund of the row red*/
+    background: #ff523b;
+    /* gets rid of the bold*/
+    font-weight: normal;
+}
+
+/*editing the table data */
+td{
+    /* adds 10px space between the row and data*/
+    padding: 10px;
+}
+
+
+/* editing the table data input field*/
+td input{
+    /* makes the box 40px*/
+    width: 40px;
+    /* makes the box 30px high*/
+    height: 30px;
+    /* adds 5px inside*/
+    padding: 5px;
+}
+
+/* editing the remove text*/
+td a{
+    /* make it red*/
+    color: #ff523b;
+    /* make it 12px font*/
+    font-size: 12px;
+}
+
+/* now editing the table data img*/
+td img{
+    /* make height and width both 80px*/
+    width: 80px;
+    height: 80px;
+    /* from the text add a 10px space*/
+    margin-right: 10px;
+}
+
+
+
+/* This is for the price*/
+.total-price{
+    /* Here we are making the contained*/
+    display: flex;
+    /* here it puts everything on the main axis which is horizontal*/
+    justify-content: flex-end;
+}
+
+/* this is for the line above and the width*/
+.total-price table{
+    /* for the top of the border we are making a solid lnie*/
+    border-top: 3px solid #ff523b;
+    /* the table width is 100% of parent container*/
+    width: 100%;
+    /* the max is 400*/
+    max-width: 400px;
+}
+
+/* aligning it with everything*/
+/* last child makes sures we are only using the last cell in the row*/
+td:last-child{
+    /* everything aligns to the right*/
+    text-align: right;
+}
+
+/* this one is for the last row headers*/
+th:last-child{
+    text-align: right;
+}
+
+
+
+
+
+
+/* This is for the accoint page*/
+.account-page{
+    /* 50px space up and down and then 0 left and right*/
+    padding: 50px 0;
+    /* the background color is white and peach*/
+    background: radial-gradient(#fff, #ffd6d6);
+}
+
+/* This is making the container for the form*/
+.form-container{
+    /* The background of the box is white*/
+    background: #fff;
+    /* The width of the box is 300px*/
+    width: 300px;
+    /* The height of the box is 400px*/
+    height: 400px;
+    /* allowes for relative positioning of child elements*/
+    position: relative;
+    /* Centers all the content in the box*/
+    text-align: center;
+    /* From the top and bottom we have 20px of space and 0 left and right*/
+    padding: 20px 0;
+    /* centers the box horizontally in the parent container*/
+    margin: auto;
+    /*This adds a slight shadow around it*/
+    /* The first 2 0's add horzontal and vertical offsets having 0 means its right behind the elements*/
+    /* 20px is the radius of the shawdow*/
+    /* 0px is the actual size of the shadow itself */
+    /* rgba 0 0 0 0.4 is the color for the shadow*/
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
+    /* This is for the switching*/
+    /* it shows the switching inside the container it doesnt bleed out into the screen */
+    overflow: hidden;
+}
+
+/* EDiting the span*/
+.form-container span{
+    /* Making it bold*/
+    font-weight: bold;
+    /* giving 0 up and down and 10 left and right*/
+    padding: 0 10px;
+    /* this color*/
+    color: #555;
+    /* When hovered over it its a pointer*/
+    cursor: pointer;
+    /* makes the span 100px and makes sure it tkes up all of it*/
+    width: 100px;
+    /* gives it inline propertie*/
+    display: inline-block;
+}
+
+/* editing the button*/
+.form-btn{
+    /* */
+    display: inline-block;
+}
+
+/* editing the form tags and inside*/
+.form-container form{
+    /* gives it a 300px max*/
+    max-width: 300px;
+    /* 0 padding top adn bottom and 20px left adn right*/
+    padding: 0 20px;
+    /* this places underneath*/
+    position: absolute;
+    /* move the form 130px down */
+    top: 130px;
+    /* Makes the animation 1sec and smooth*/
+    transition: transform 1s;
+}
+
+
+/* editing the input boxes*/
+form input{
+    /* takes up the entire box*/
+    width: 100%;
+    /* 30px high*/
+    height: 30px;
+    /* 10px up and down space nad 0 left and right space*/
+    margin: 10px 0;
+    /* 0 pixel space inside the lement up and down and 10px left and right*/
+    padding: 0 10px;
+    /* This is the input border color*/
+    border: 1px solid #ccc;;
+}
+
+/* changing the btn*/
+form .btn{
+    /* Takes up all space*/
+    width: 100%;
+    /* gets rid of button border*/
+    border: none;
+    /* hover over puts a pointer*/
+    cursor: pointer;
+}
+
+/* Getting rid of the box outline*/
+form .btn:focus{
+    outline: none;
+}
+
+/* moving the login form to the side to serpeate them*/
+#LoginForm{
+    left: -300px;
+}
+
+/* keeping this in the same spot*/
+#RegForm{
+    left: 0px;
+}
+
+/* making it smaller*/
+form a{
+    font-size: 12px;
+}
+
+/* Creating the indicator to show what we on*/
+#Indicator{
+    /* The indicator is 100px*/
+    width: 100px;
+    /* indicator has no borders*/
+    border: none;
+    /* its red*/
+    background: #ff523b;
+    /* 3 px high*/
+    height: 3px;
+    /* 8 px space above*/
+    margin-top: 8px;
+    /* move the pixel 100px to the right from its original position*/
+    transform: translateX(100px);
+    /* it takes a sec and its smooth*/
+    transition: transform 1s;
+}
+
+

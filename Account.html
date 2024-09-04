@@ -1,0 +1,191 @@
+<!-- copy and paste the ShoppignCart html page-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Jahan Wholesale</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+        <div class="container">
+            <div class="navbar">
+                <div class="Logo">
+                    <a href="index.html"><img src="images/logo.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="Account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="ShoppingCart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+
+<!-- Account Page -->
+<div class="account-page">
+    <!-- Put it in a container-->
+    <div class="container">
+        <!-- We are adding a row here-->
+        <div class="row">
+            <!-- Then inside this columns is our image-->
+            <div class="col-2">
+                <!-- image that takes up the entire columns-->
+                <img src="images/image1.png" width="100%">
+            </div>
+            <!-- Then another columns with our form container in it-->
+            <div class="col-2">
+                <div class="form-container">
+                    <!-- This is creating the form buttons-->
+                    <div class="form-btn">
+                        <!-- The span is the login adn register at the top-->
+                        <!-- The onlcikc is so the javascript gets activated when clicked-->
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <!-- This is for the css to show which one we are on-->
+                        <hr id="Indicator">
+                    </div>
+                    <!-- This is the two forms-->
+                    <!-- This one is the login form-->
+                    <!-- Form warps everything in form eleemnts and when submited send data to server-->
+                    <!-- We have the id for the css to edit the position-->
+                    <form id="LoginForm">
+                        <!-- Input creates an input field and text is so we can type text and placeholder is basically that it shows username when empty-->
+                        <input type="text" placeholder="Username">
+                        <!-- Same thing but for password-->
+                        <input type="password" placeholder="Password">
+                        <!-- So here we made a button and submit is so it knows to collect data when clicked we have class there so we can style and login is shown on the button-->
+                        <button type="submit" class="btn">Login</button>
+                        <!-- a creates a hyperlink and on takes u to redo it-->
+                        <a href="">Forgot Password</a>
+                    </form>
+
+                    <!-- Same thing for everything above except no forgot password and this is for registering-->
+                    <!-- this is for the css position editing-->
+                    <form id="Regform">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Delete the Cart Items -->
+<!-- Delete the Cart Item details-->
+<!-- Delete everything inbetween the navigatio bar and footer-->
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3> Download Our App</h3>
+                    <p> Download App for Android and ios mobiel phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p> Our Purpose Is to sustaniably make the pleasure and benefits of sports accesible to the many</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Snapchat</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Jahan Wholesale</p>
+        </div>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+<!-- JS for the toggle form(moving indicator)-->
+<script>
+    // These are my 3 variables and I am controlling from these IDs
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("Regform");
+    var Indicator = document.getElementById("Indicator");
+
+    function register(){
+        // Move register from its original position
+        RegForm.style.transform = "translateX(0px)";
+        // move the login out of view
+        LoginForm.style.transform = "translateX(0px)";
+        // move indicator to show register is active
+        Indicator.style.transform = "translateX(100px)";
+    }
+
+    function login(){
+        // move the registor out of view
+        RegForm.style.transform = "translateX(300px)";
+        // move the login form to it original posotions
+        LoginForm.style.transform = "translateX(300px)";
+        // move the indicator to show login is active
+        Indicator.style.transform = "translateX(0px)";
+
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
